@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<!--
+	Visualize by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>PainTine</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		{% load static %}
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+	</head>
+	<body>
+		<!-- Header -->
+					<header id="soloheader">
+						<span class="soloavatar"><a href="{% url 'accueil' %}"><img src="static/images/home.png" alt="" /></a></span>
+					</header>
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Main -->
+					<section id="main">
+
+						<!-- Thumbnails -->
+							
+								
+									<CENTER>
+										<figure><center><img style="width: 60%" src="static/pictures/{{peinture_data.RealName | safe}}.png" alt="{{peinture_data.Nom_}}" /></center>
+											<center><figcaption><h2>{{ peinture_data.Nom }}</h2></figcaption></center>
+											</figure>
+									<TABLE>
+									<TR>
+									<TD>Nom : </TD>
+									<TD>{{ peinture_data.Nom }}</TD>
+									</TR>
+									<TR>
+									<TD>Dimensions : </TD>
+									<TD>{{ peinture_data.Longueur }} x {{ peinture_data.Largueur }}</TD>
+									</TR>
+									<TR>
+									<TD>Nature : </TD>
+									<TD><a href="" title='{{Nature_Desc.Description }}' class="tooltip"><span title="">{{ Nature_Desc.Nature }}</span></a></TD>
+									</TR>
+									<TR>
+									<TD>Réalisateur : </TD>
+									<TD>{{ peinture_data.Realisateur|safe}}</TD>
+									</TR>
+									</TABLE></CENTER>
+
+
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p>&copy; PainTine. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>. Demo Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
